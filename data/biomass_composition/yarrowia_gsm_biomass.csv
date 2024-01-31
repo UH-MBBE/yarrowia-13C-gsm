@@ -1,0 +1,48 @@
+﻿Full Name,gsm_metabolite_id,metabolite_type
+"1,3-beta-D-Glucan",13BDglcn[c],Carbohydrate
+ADP,adp[c],Energy Molecule
+L-Alanine,ala_L[c],Amino Acid
+AMP,amp[c],RNA
+L-Arginine,arg_L[c],Amino Acid
+L-Asparagine,asn_L[c],Amino Acid
+L-Aspartate,asp_L[c],Amino Acid
+ATP,atp[c],Energy Molecule
+Biomass,biomass[c],Other
+Chitin Monomer,chitin[c],Carbohydrate
+CMP,cmp[c],RNA
+L-Cysteine,cys_L[c],Amino Acid
+dAMP,damp[c],DNA
+dCMP,dcmp[c],DNA
+dGMP,dgmp[c],DNA
+dTMP,dtmp[c],DNA
+Ergosterol,ergst[c],Lipid
+L-Glutamine,gln_L[c],Amino Acid
+L-Glutamate,glu_L[c],Amino Acid
+Glycine,gly[c],Amino Acid
+GMP,gmp[c],RNA
+H2O,h2o[c],Other
+H,h[c],Other
+L-Histidine,his_L[c],Amino Acid
+L-Isoleucine,ile_L[c],Amino Acid
+L-Leucine,leu_L[c],Amino Acid
+L-Lysine,lys_L[c],Amino Acid
+Mannan,mannan[c],Carbohydrate
+L-Methionine,met_L[c],Amino Acid
+Phosphatidate (yeast specific),pa_SC[c],Lipid
+Phosphatidylcholine (yeast specific),pc_SC[c],Lipid
+Phosphatidylethanolamine (yeast specific),pe_SC[c],Lipid
+L-Phenylalanine,phe_L[c],Amino Acid
+Phosphate,pi[c],Other
+L-Proline,pro_L[c],Amino Acid
+Phosphatidylserine (yeast specific),ps_SC[c],Lipid
+Phosphatidyl 1D-myo-inositol (yeast specific),ptd1ino_SC[c],Lipid
+L-Serine,ser_L[c],Amino Acid
+Sulfate,so4[c],Other
+L-Threonine,thr_L[c],Amino Acid
+Trehalose,tre[c],Carbohydrate
+Triglyceride (yeast specific),triglyc_SC[c],Lipid
+L-Tryptophan,trp_L[c],Amino Acid
+L-Tyrosine,tyr_L[c],Amino Acid
+UMP,ump[c],RNA
+L-Valine,val_L[c],Amino Acid
+Zymosterol,zymst[c],Lipid
