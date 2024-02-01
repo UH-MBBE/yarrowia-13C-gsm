@@ -1,6 +1,6 @@
 # _Yarrowia lipolytica_ <sup>13</sup>C-MFA Constrained GSM
 
-This project is a series of Jupyter notebooks focused on the analysis of the metabolism of the oleaginous yeast, Yarrowia lipolytica, when grown with glucose, glycerol, and oleic acid. The analysis ranges from growth parameter calculations to transcriptomic analysis, utilizing 13C-metabolic flux analysis a Genome-Scale Model (GSM).
+This project is a series of Jupyter notebooks focused on the analysis of the metabolism of the oleaginous yeast, <i>Yarrowia lipolytica</i>, when grown with glucose, glycerol, and oleic acid. The analysis involves growth parameter calculations, using a genome scale model (GSM) to generate feasible flux ranges for <sup>13</sup>C-MFA, using <sup>13</sup>C-MFA results to constrain GSM reaction rates, and transcriptomic analyses.
 
 - [System Requirements](#system-requirements)
 - [Instructions for use](#instructions-for-use)
@@ -27,16 +27,16 @@ To run the code in this repository use the following commands:
 ## Summary of notebooks
 
 - Notebook A: Experimental Growth Parameter Calculations
-- Notebook B: Find Feasible Bounds for 13C-MFA using GSM and observed biomass yield
-- Notebook C: Find GSM flux bounds by constraining the GSM with 13C-MFA
-- Notebook D: Plot Figures for Manuscript
-- Notebook E: Comparative Transcriptomic Analysis in Y. lipolytica
+- Notebook B: Find Feasible Bounds for <sup>13</sup>C-MFA Using GSM and Observed Biomass Yield
+- Notebook C: Find GSM Flux Bounds by Constraining the GSM with <sup>13</sup>C-MFA
+- Notebook D: Plot Figures Related to the GSM
+- Notebook E: Comparative Transcriptomic Analysis in <i>Y. lipolytica</i>
 - Supplemental Notebook A: Gene Annotation Correction in GSM iYLI647
-- Supplemental Notebook B: Refining Yarrowia Biomass Reaction with Strain-Specific Data
+- Supplemental Notebook B: Refining <i>Y. lipolytica</i> Biomass Reaction with Strain-Specific Data
 
 ## Reference
 
-This work is currently unpublished.
+This work is currently being prepared for publication
 
 ## License
 
