@@ -2,6 +2,8 @@ import pandas as pd
 from genome_scale_modeling.get_min_max_flux_expression_from_ids import get_min_max_flux_expression_from_ids
 from gsm_bounds_from_biomass_cutoff.add_mfa_bound_feasibility_column import add_mfa_bound_feasibility_column
 
+# This function uses the biomass yield for a substrate to generate bounds for the MFA
+# reactions using flux varibability analysis (FVA) with the GSM.
 def add_gsm_bounds_from_cutoff(model=None, central_rxn_df=None, substrate=None, uptake_reaction=None, biomass_cutoff=None):
     central_rxn_df = central_rxn_df.copy()
 

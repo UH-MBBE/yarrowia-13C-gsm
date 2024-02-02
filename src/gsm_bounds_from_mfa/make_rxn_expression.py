@@ -1,3 +1,5 @@
+# This function converts reaction id string from the 13C-MFA dataframe into a reaction 
+# expression string with the format used by the straindesign package.
 def make_rxn_expression(reaction_ids):
     or_split = [x.strip(' ') for x in reaction_ids.split(' or ')]
 

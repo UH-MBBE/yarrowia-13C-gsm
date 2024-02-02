@@ -1,6 +1,8 @@
 import pandas as pd
 from genome_scale_modeling.get_min_max_flux_expression_from_ids import get_min_max_flux_expression_from_ids
 
+# This function uses a constraint string from MFA data to generate bounds for the MFA
+# reactions using flux varibability analysis (FVA) with the GSM.
 def add_gsm_bounds_from_mfa(model=None, central_rxn_df=None, substrate=None, constraints=None):
     central_rxn_df = central_rxn_df.copy()
 

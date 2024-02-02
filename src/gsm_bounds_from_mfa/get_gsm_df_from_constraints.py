@@ -1,7 +1,8 @@
 import pandas as pd
 import straindesign as sd
 
-# this function returns a dataframe with rows for every GSM reaction
+# This function performs both parsimonious Flux Balance Analysis (pFBA) and Flux Variability Analysis (FVA) to 
+# generate and return a DataFrame detailing reaction IDs, names, full reactions, and calculated flux ranges
 def get_gsm_df_from_constraints(
         model=None, 
         substrate=None,

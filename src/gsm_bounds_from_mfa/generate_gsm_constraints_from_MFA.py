@@ -1,6 +1,8 @@
 from gsm_bounds_from_mfa.make_rxn_constraint_string import make_rxn_constraint_string
 
+# Generates a straindesign constraint string of GSM constraints from MFA data
 def generate_gsm_constraints_from_MFA(mfa_reactions_to_use=None, central_rxn_df=None, substrate=None):
+
     mfa_lb_col = f'{substrate} MFA LB'
     mfa_ub_col = f'{substrate} MFA UB'
 

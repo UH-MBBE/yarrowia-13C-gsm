@@ -3,7 +3,8 @@ import math
 from scipy import stats
 import matplotlib.pyplot as plt
 
-# Define a function for calculating growth parameters from a trial
+# This function calculates growth parameters for a single trial. It computes the 
+# growth rate, yield coefficient, and substrate uptake rate for a given trial number.
 def get_trial_growth_parameters(
     growth_df=None, 
     trial_num=None, 

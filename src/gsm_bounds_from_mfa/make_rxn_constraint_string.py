@@ -1,5 +1,6 @@
 from gsm_bounds_from_mfa.make_rxn_expression import make_rxn_expression
 
+# This function takes a string with reaction_ids and a lower and upper bound and returns a string
 def make_rxn_constraint_string(reaction_ids, lower_bound, upper_bound):
     reaction_expression = make_rxn_expression(reaction_ids)
 

@@ -1,6 +1,8 @@
 import pandas as pd
 from gsm_bounds_from_biomass_cutoff.check_feasibility import check_feasibility
 
+# function to add a column to the dataframe that checks if the MFA bounds 
+# from the GSM FVA analysis with biomass yield are feasible
 def add_mfa_bound_feasibility_column(full_central_rxn_df, substrate):
     mfa_bound_feasibilities = []
     gsm_lb, gsm_ub = f'{substrate} GSM LB', f'{substrate} GSM UB'
