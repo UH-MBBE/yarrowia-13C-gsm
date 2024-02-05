@@ -11517,7 +11517,7 @@
 "crn[c]":1.0,
 "crn[m]":-1.0
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YALI0C02431g",
 "subsystem":"Transport Mitochondrial"
@@ -11581,7 +11581,7 @@
 "coa[c]":1.0,
 "crn[c]":-1.0
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Alanine and Aspartate Metabolism"
