@@ -41,7 +41,7 @@ def plot_beta_carotene_and_co2_yield(beta_carotene_yield_df):
 
 
     plt.title('Beta-Carotene Theoretical Yield and Associated CO2 Loss in Glucose and Oleic Acid Co-Feeding')
-    plt.xlabel('Oleic Acid Fraction (g oleic acid / g total Substrate)')
+    plt.xlabel('Oleic Acid Fraction (g oleic acid / g total substrate)')
     plt.ylabel('Yield (g product / g total substrate)')
     plt.legend()
     plt.show()
