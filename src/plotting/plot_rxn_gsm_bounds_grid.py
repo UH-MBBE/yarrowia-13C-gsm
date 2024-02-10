@@ -7,7 +7,7 @@ def plot_rxn_gsm_bounds_grid(central_rxn_df=None, substrate=None):
     # Set up the grid dimensions
     n_rows = 16  # Adjust based on the actual number of plots
     n_cols = 3
-    fig, axs = plt.subplots(n_rows, n_cols, figsize=(20, 4 * n_rows))  # Adjust width as needed
+    fig, axs = plt.subplots(n_rows, n_cols, figsize=(20, 4 * n_rows), dpi=300)  # Adjust width as needed
     axs = axs.flatten()  # Flatten the array of axes for easy iteration
 
     # Define labels for lower and upper bounds
@@ -52,4 +52,5 @@ def plot_rxn_gsm_bounds_grid(central_rxn_df=None, substrate=None):
     plt.subplots_adjust(hspace=0.5)  # Increase horizontal spacing between plots
 
     # Show the plot
+    plt.savefig(f'../figures/{substrate} gsm and mfa bounds.png', dpi=300)
     plt.show()

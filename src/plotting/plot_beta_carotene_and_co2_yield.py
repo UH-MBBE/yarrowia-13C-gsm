@@ -6,7 +6,7 @@ def plot_beta_carotene_and_co2_yield(beta_carotene_yield_df):
     last_point = beta_carotene_yield_df.iloc[[-1]]
 
     # Plotting g_oleic_acid on the x-axis and g_beta_carotene on the y-axis
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(10, 6), dpi=300)
     plt.plot(
         beta_carotene_yield_df['g_oleic_acid'], 
         beta_carotene_yield_df['g_beta_carotene'], 
@@ -30,7 +30,7 @@ def plot_beta_carotene_and_co2_yield(beta_carotene_yield_df):
         marker='o', 
         linestyle='-', 
         color='green',
-        label='CO2 Loss (g/g)'
+        label=r'$CO_2$ Loss (g/g)'  # Use raw string for LaTeX-style text
     )
     plt.plot(
         [first_point['g_oleic_acid'].values[0], last_point['g_oleic_acid'].values[0]],
@@ -40,8 +40,10 @@ def plot_beta_carotene_and_co2_yield(beta_carotene_yield_df):
     )  # red dashed line for emphasis
 
 
-    plt.title('Beta-Carotene Theoretical Yield and Associated CO2 Loss in Glucose and Oleic Acid Co-Feeding')
+    plt.title('Beta-Carotene Theoretical Yield and Associated $CO_2$ Loss in Glucose and Oleic Acid Co-Feeding')
     plt.xlabel('Oleic Acid Fraction (g oleic acid / g total substrate)')
     plt.ylabel('Yield (g product / g total substrate)')
     plt.legend()
+
+    plt.savefig(f'../figures/theoretical beta carotene.png', dpi=300)
     plt.show()

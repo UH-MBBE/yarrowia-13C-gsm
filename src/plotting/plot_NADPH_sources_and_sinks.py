@@ -5,7 +5,7 @@ def plot_NADPH_sources_and_sinks(df, model=None, substrate=None):
 
     df = df.copy()  # Make a copy of the DataFrame to avoid modifying the original
     df = add_NADPH_fluxes_to_df(df, model, substrate)  # Add NADPH fluxes to the DataFrame
-    fig, ax = plt.subplots(figsize=(10, 10))  # Create a figure and a single subplot
+    fig, ax = plt.subplots(figsize=(10, 10), dpi=300)  # Create a figure and a single subplot
 
     # reverse the order of the rows in the df
     df = df.iloc[::-1]
@@ -52,4 +52,5 @@ def plot_NADPH_sources_and_sinks(df, model=None, substrate=None):
     ax.set_xlabel(f'mmol NADPH Produced / 100 mmols {substrate}')
 
     # Adjust layout
+    plt.savefig(f'../figures/{substrate} NADPH sources and sinks.png', dpi=300)
     plt.tight_layout()
