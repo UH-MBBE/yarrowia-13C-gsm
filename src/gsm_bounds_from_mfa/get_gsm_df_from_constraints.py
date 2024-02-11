@@ -27,14 +27,20 @@ def get_gsm_df_from_constraints(
 
     biomass_reaction_id = 'biomass_oil' if substrate == 'Oleic Acid' else 'biomass_glucose'
 
-    # run pFBA to get the pFBA flux values
-    pfba_solution = sd.fba(model, constraints=constraints, obj=biomass_reaction_id, obj_sense='maximize', pfba=1)
-
     # run FVA to the get the pFBA flux ranges
     fva_solution = sd.fva(
       model, 
       constraints=constraints,
     )
+
+    for reaction_id, row in fva_solution[:5].iterrows():
+        min = row['minimum']
+        max = row['maximum']
+
+        model.reactions.get_by_id(reaction_id).bounds = (min, max)
+
+    # pfba_solution
+    pfba_solution = sd.fba(model, constraints=constraints, obj=biomass_reaction_id, obj_sense='maximize', pfba=1)
 
     # maybe scale the fluxes to 100 uptake for oleic acid here
     if substrate == 'Oleic Acid':
