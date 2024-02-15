@@ -3,7 +3,7 @@ import numpy as np
 
 # This function computes the average growth parameters across multiple trials. This function 
 # leverages the get_trial_growth_parameters function for each trial and then averages the results.
-def get_average_growth_parameters(growth_df=None, substrate=None, molar_mass=None):
+def get_average_growth_parameters(growth_df=None, substrate=None, molar_mass=None, yield_coefficient=None):
     growth_rates = []
     yield_coefficients = [] 
     substrate_uptake_rates = []
@@ -16,7 +16,8 @@ def get_average_growth_parameters(growth_df=None, substrate=None, molar_mass=Non
             growth_df=growth_df, 
             trial_num=trial_num, 
             molar_mass=molar_mass, 
-            substrate=substrate
+            substrate=substrate,
+            yield_coefficient=yield_coefficient,
         )
 
         print(f'Trial {trial_num}:')

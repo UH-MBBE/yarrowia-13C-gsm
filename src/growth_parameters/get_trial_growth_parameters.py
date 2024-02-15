@@ -9,7 +9,8 @@ def get_trial_growth_parameters(
     growth_df=None, 
     trial_num=None, 
     molar_mass=None,
-    substrate=None
+    substrate=None,
+    yield_coefficient=None,
 ):
     # define the conversion factor from OD to g/L
     yarrowia_g_per_OD = 0.2966
@@ -34,14 +35,27 @@ def get_trial_growth_parameters(
 
     delta_X = final_biomass - starting_biomass
     delta_S = starting_substrate - final_substrate
-    yield_coefficient = delta_X / delta_S
+
+    # handle non oleic acid case
+    if substrate == 'oleic_acid':
+      print('oleic acid')
+      starting_substrate = 7.08 # mmol / l
+
+    # handle not oleic acid case
+    else:
+        print('not oleic acid')
+        yield_coefficient = delta_X / delta_S
+      
+
     substrate_uptake_rate = (1/yield_coefficient) * growth_rate
 
     fitted_substrate_conc = [starting_substrate - (1 / yield_coefficient) * biomass_produced 
                                 for biomass_produced in fitted_biomass_produced]
     
+    print(fitted_biomass_conc)
+    
     # define a plotting area with two subplots
-    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 5))
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 5), dpi=300)
 
     # Set the background color of the figure to white
     fig.patch.set_facecolor('white')
@@ -70,6 +84,10 @@ def get_trial_growth_parameters(
     # plot fitted biomass concentration curve
     axes[0].plot(time_h, fitted_biomass_conc, '-', color='red')
 
+    # make the title look nicer
+    if substrate == 'oleic_acid':
+        substrate = 'Oleic Acid'
+
     # plot substrate consumption data on the right
     axes[1].set_title(f'{substrate.capitalize()} Consumption', fontsize=16)
     axes[1].set_ylabel(f'{substrate.capitalize()} (mmol/L)', fontsize=14)
@@ -79,5 +97,9 @@ def get_trial_growth_parameters(
     axes[1].plot(time_h, substrate_mmols_L, 'o', color='blue')
     # plot fitted substrate concentration curve
     axes[1].plot(time_h, fitted_substrate_conc, '-', color='blue')
+
+    # save the plot to a file
+    # plt.tight_layout()
+    plt.savefig(f'../figures/fitted_growth_curves_{substrate}_{trial_num}.png')
 
     return growth_rate, yield_coefficient, substrate_uptake_rate
