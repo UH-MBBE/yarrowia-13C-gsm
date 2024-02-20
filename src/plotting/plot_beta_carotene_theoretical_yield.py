@@ -1,14 +1,15 @@
 import matplotlib.pyplot as plt
 
+
 # Adjust default font sizes
 plt.rcParams.update({
     'font.size': 12,            # Overall default font size
-    'axes.titlesize': 16,       # Font size of the axes title
-    'axes.labelsize': 16,       # Font size of the x and y labels
-    'xtick.labelsize': 14,      # Font size of the tick labels
-    'ytick.labelsize': 14,      # Font size of the tick labels
-    'legend.fontsize': 14,      # Font size of the legend
-    'figure.titlesize': 18      # Font size of the figure title
+    'axes.titlesize': 18,       # Font size of the axes title
+    'axes.labelsize': 18,       # Font size of the x and y labels
+    'xtick.labelsize': 16,      # Font size of the tick labels
+    'ytick.labelsize': 16,      # Font size of the tick labels
+    'legend.fontsize': 13,      # Font size of the legend
+    'figure.titlesize': 20      # Font size of the figure title
 })
 
 def plot_beta_carotene_theoretical_yield(glycerol_df=None, glucose_df=None):

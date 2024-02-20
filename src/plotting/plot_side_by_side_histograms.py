@@ -4,12 +4,12 @@ import numpy as np
 # Adjust default font sizes
 plt.rcParams.update({
     'font.size': 12,            # Overall default font size
-    'axes.titlesize': 16,       # Font size of the axes title
-    'axes.labelsize': 16,       # Font size of the x and y labels
+    'axes.titlesize': 14,       # Font size of the axes title
+    'axes.labelsize': 14,       # Font size of the x and y labels
     'xtick.labelsize': 14,      # Font size of the tick labels
     'ytick.labelsize': 14,      # Font size of the tick labels
     'legend.fontsize': 14,      # Font size of the legend
-    'figure.titlesize': 18      # Font size of the figure title
+    'figure.titlesize': 14      # Font size of the figure title
 })
 
 # Modified function to include average and standard deviation in the plots
