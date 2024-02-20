@@ -3,14 +3,15 @@ import matplotlib.pyplot as plt
 # Adjust default font sizes
 plt.rcParams.update({
     'font.size': 12,            # Overall default font size
-    'axes.titlesize': 14,       # Font size of the axes title
-    'axes.labelsize': 12,       # Font size of the x and y labels
-    'xtick.labelsize': 10,      # Font size of the tick labels
-    'ytick.labelsize': 10,      # Font size of the tick labels
-    'legend.fontsize': 10,      # Font size of the legend
+    'axes.titlesize': 16,       # Font size of the axes title
+    'axes.labelsize': 16,       # Font size of the x and y labels
+    'xtick.labelsize': 14,      # Font size of the tick labels
+    'ytick.labelsize': 14,      # Font size of the tick labels
+    'legend.fontsize': 14,      # Font size of the legend
+    'figure.titlesize': 18      # Font size of the figure title
 })
 
-def plot_theoretical_yield_glucose_glycerol(glycerol_df=None, glucose_df=None):
+def plot_beta_carotene_theoretical_yield(glycerol_df=None, glucose_df=None):
     fig, axs = plt.subplots(1, 2, figsize=(15, 6), dpi=300)  # Create 1 row, 2 columns of plots
 
     # Extracting the first and last points from the dataframes
