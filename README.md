@@ -36,7 +36,7 @@ To run the code in this repository use the following commands:
 
 ## Reference
 
-This work is currently being prepared for publication
+AM Worland, Z Han, J Maruwan, Y Wang, ZY Du, YJ Tang, WW Su*, GW Roell*. [Elucidation of triacylglycerol catabolism in Yarrowia lipolytica: How cells balance acetyl-CoA and excess reducing equivalents](https://doi.org/10.1016/j.ymben.2024.06.010). Metabolic Engineering, 85, pp. 1-13 (2024)
 
 ## License
 
